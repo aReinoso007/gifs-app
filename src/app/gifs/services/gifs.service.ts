@@ -1,13 +1,13 @@
+import { Gif, SearchResponse } from './../interfaces/gif.interfaces';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GifsService {
-
+  public gifList: Gif[]=[];
   private _tagsHistory: string[]=[];
 
   constructor(
@@ -25,9 +25,9 @@ export class GifsService {
     .set('api_key', environment.apiKey)
     .set('limit', '10')
     .set('q', tag)
-    this.http.get<any[]>(`${environment.apiURL}/search`, {params: params})
-    .subscribe( res =>{
-      console.log({res})
+    this.http.get<SearchResponse>(`${environment.apiURL}/search`, {params: params})
+    .subscribe( (res: SearchResponse) =>{
+      this.gifList = res.data
     })
   }
 
