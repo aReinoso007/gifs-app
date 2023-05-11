@@ -15,6 +15,7 @@ It's a basic gif search app that used Giphy API to fetch gifs. It was built thin
 * Add pagination
 * Preview images
 * Better Styling for the history section 
+* Search bar fixed
 
 ## Preview
 ![Alt Text](assets/sample.gif)
