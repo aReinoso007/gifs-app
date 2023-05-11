@@ -25,7 +25,7 @@ export class GifsService {
     this.organizeHistory(tag);
     const params = new HttpParams()
     .set('api_key', environment.apiKey)
-    .set('limit', '10')
+    .set('limit', '30')
     .set('q', tag)
     this.http.get<SearchResponse>(`${environment.apiURL}/search`, {params: params})
     .subscribe( (res: SearchResponse) =>{
@@ -51,5 +51,7 @@ export class GifsService {
   private loadLocalStorage(){
     if(!localStorage.getItem('history')) return 
     this._tagsHistory = JSON.parse(localStorage.getItem('history')!);
+    if (this._tagsHistory.length === 0 ) return
+    this.searchTag(this._tagsHistory[0])
   }
 }
