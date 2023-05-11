@@ -2,26 +2,19 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
 
-## Development server
+It's a basic gif search app that used Giphy API to fetch gifs. It was built thinking about modularity and component reusability as well as modules using bootstrap for sytling. The user has a a history tab where they can see their 10 most recent searches so they can easily get to back to what they are looking for.
+## Topics
+* Module sharing
+* Service based data
+* Component reusability
+* Lazy loading of images
+* Usage of component params for sharing data between components
+* LocalStorage for keeping data after a reload
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Further development
+* Add pagination
+* Preview images
+* Better Styling for the history section 
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Preview
+![Alt Text](assets/sample.gif)
