@@ -14,6 +14,7 @@ export class GifsService {
   }
 
   public searchTag(tag: string){
+    if(tag.length === 0 ) return;
     this._tagHistory.unshift(tag);
   }
 }
