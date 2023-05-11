@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
 
-It's a basic gif search app that used Giphy API to fetch gifs. It was built thinking about modularity and component reusability as well as modules using bootstrap for sytling. The user has a a history tab where they can see their 10 most recent searches so they can easily get to back to what they are looking for.
+It's a basic gif search app that used Giphy API to fetch gifs. It was built thinking about modularity and component reusability and bootstrap for sytling. The user has a a history tab where they can see their 10 most recent searches so they can easily get to back to what they are looking for; these get stored in the local storage,however, it would be best to use session storage.
 ## Topics
 * Module sharing
 * Service based data
